@@ -33,29 +33,31 @@ export default function SetTheme() {
 	}
 
 	const defaultTheme = () => {
-		const themeLocalStorage = localStorage.getItem('theme')
-		const themeSystem       = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-
-		return ( themeLocalStorage ?? themeSystem )
-	}
-
-	useEffect( () => {
-
-		if ( ! theme ) return setTheme( defaultTheme() )
-
-		document.querySelector(':root').dataset.theme = ( theme )
-		localStorage.setItem( 'theme', ( theme ) )
-		
-		const useSetTheme = (e) => { setTheme( e.matches ? 'dark' : 'light' ) }
-
-		const watchSysTheme = window.matchMedia('(prefers-color-scheme: dark)')
-
-		watchSysTheme.addEventListener( 'change', useSetTheme )
-
+		// Получаем сохраненную тему из localStorage
+		const themeLocalStorage = localStorage.getItem('theme');
+	  
+		// Устанавливаем системную тему (предпочтения пользователя) или темную как дефолт
+		const themeSystem = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+	  
+		// Если тема в localStorage не сохранена, используем темную тему по умолчанию
+		return themeLocalStorage ?? 'dark';
+	  }
+	  
+	  useEffect(() => {
+		if (!theme) return setTheme(defaultTheme());
+	  
+		document.querySelector(':root').dataset.theme = theme;
+		localStorage.setItem('theme', theme);
+	  
+		const useSetTheme = (e) => { setTheme(e.matches ? 'dark' : 'light'); };
+		const watchSysTheme = window.matchMedia('(prefers-color-scheme: dark)');
+	  
+		watchSysTheme.addEventListener('change', useSetTheme);
+	  
 		return () => {
-			watchSysTheme.removeEventListener( 'change', useSetTheme )
-		}
-	}, [theme] )
+		  watchSysTheme.removeEventListener('change', useSetTheme);
+		};
+	  }, [theme]);
 
 	useEffect( () => {
 		class RouteEvents {
@@ -102,13 +104,13 @@ export default function SetTheme() {
 	
 	return (
 		<>
-			<Script id="theme.util.jsx" strategy="beforeInteractive" >
-				{`
-				let themeLocalStorage = localStorage.getItem('theme')
-				let themeSystem       = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-				document.querySelector(':root').dataset.theme = themeLocalStorage ?? themeSystem
-				`}
-			</Script>
+		<Script id="theme.util.jsx" strategy="beforeInteractive">
+  {`
+    let themeLocalStorage = localStorage.getItem('theme');
+    let themeSystem = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.querySelector(':root').dataset.theme = themeLocalStorage ?? 'dark';
+  `}
+</Script>
 			<button key="themeToggle" onClick={toggleTheme} data-theme={theme} className={css.toggle}>{buttonIcon(theme)}</button>
 		</>
 	)
