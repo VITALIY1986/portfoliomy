@@ -4,15 +4,15 @@
 		"title": "About Me"
 	},
 	{
-		"url": "/case-studies",
+		"url": "/",
 		"title": "Case Studies"
 	},
 	{
-		"url": "/articles",
+		"url": "/",
 		"title": "Articles"
 	},
 	{
-		"url": "/projects",
+		"url": "/",
 		"title": "Projects"
 	}
 ]

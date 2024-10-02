@@ -2,22 +2,22 @@
 	"acknowledgments": [
 		{ 
 			"person": "Jihad Hassan - Marketing Director",
-			"link": "",
+			"link": "/",
 			"note": "Thank you for all the advice and feedback."
 		},
 		{ 
 			"person": "Colorpong - Artist",
-			"link": "ttps://www.youworkforthem.com/designer/536/colorpong?aff=1115",
+			"link": "/",
 			"note": "Checkout their amazing vector illustrations."
 		},
 		{ 
 			"person": "Brittany Chiang - Software Engineer",
-			"link": "https://brittanychiang.com/",
+			"link": "/",
 			"note": "A major inspiration to create an open source theme."
 		},
 		{ 
 			"person": "Vercel - Platform",
-			"link": "https://vercel.com/docs",
+			"link": "/",
 			"note": "Host your own Next.js project for free!"
 		}
 	],
@@ -25,26 +25,26 @@
 	"links": [
 		{ 
 			"person": "YWFT Creative Marketplace",
-			"link": "https://www.youworkforthem.com/?aff=1115",
+			"link": "/",
 			"note": "Best in class creative assets."
 		}
 	],
 
 	"social": [
 		{
-			"url": "https://medium.com/@--andrewnelson",
+			"url": "https://www.tiktok.com/@vitaliy.statkevich?_t=8qDXC2L336f&_r=1",
 			"icon": "medium"
 		},
 		{
-			"url": "https://dev.to/andrewnelson",
+			"url": "https://www.tiktok.com/@vitaliy.statkevich?_t=8qDXC2L336f&_r=1",
 			"icon": "dev"
 		},
 		{
-			"url": "https://www.linkedin.com/in/--andrewnelson/",
+			"url": "https://www.linkedin.com/in/vitalii-statcevych-95545817a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
 			"icon": "linkedin"
 		},
 		{
-			"url": "https://github.com/atlamors",
+			"url": "https://www.tiktok.com/@vitaliy.statkevich?_t=8qDXC2L336f&_r=1",
 			"icon": "github"
 		}
 	]
